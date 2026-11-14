@@ -1,0 +1,77 @@
+{
+  "pluginAlias": "TeslaBLE",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "100% local Bluetooth Low Energy (BLE) HomeKit integration for Tesla vehicles using Tesla's official `tesla-control` CLI.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Platform Name",
+        "type": "string",
+        "default": "Tesla BLE",
+        "required": true
+      },
+      "vehicles": {
+        "title": "Vehicles",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Vehicle Name",
+              "type": "string",
+              "default": "Model Y",
+              "required": true
+            },
+            "model": {
+              "title": "Model",
+              "type": "string",
+              "default": "Model Y"
+            },
+            "vin": {
+              "title": "VIN",
+              "type": "string",
+              "placeholder": "5YJYGDEE000000000",
+              "required": true
+            },
+            "unlockSwitchName": {
+              "title": "Hands-Free Voice Unlock Switch Name",
+              "type": "string",
+              "default": "Tesla",
+              "description": "Name of the Switch accessory for hands-free Siri voice lock/unlock without an iPhone confirmation prompt."
+            },
+            "keyFile": {
+              "title": "Private Key Path",
+              "type": "string",
+              "default": "/var/lib/homebridge/tesla-ble-key.pem",
+              "required": true
+            },
+            "pubKeyFile": {
+              "title": "Public Key Path",
+              "type": "string",
+              "default": "/var/lib/homebridge/tesla-ble-public.pem"
+            },
+            "teslaControlBin": {
+              "title": "tesla-control Binary Path",
+              "type": "string",
+              "default": "/usr/local/bin/tesla-control"
+            },
+            "pollIntervalSec": {
+              "title": "BLE Poll Interval (seconds)",
+              "type": "integer",
+              "default": 180,
+              "minimum": 30
+            },
+            "enablePairSwitch": {
+              "title": "Expose Pair BLE Key Switch in Apple Home",
+              "type": "boolean",
+              "default": false,
+              "description": "Enable temporarily when enrolling a new BLE key with your NFC key card."
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "homebridge-tesla-ble",
+  "version": "1.0.0",
+  "description": "100% local Bluetooth LE Homebridge plugin for Tesla vehicles using official tesla-control (Lock/Unlock, Hands-Free Siri Voice Switch, Climate, Charge Port, Sentry Mode, Trunk, Vent Windows)",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldrincb/homebridge-tesla-ble.git"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "tesla",
+    "ble",
+    "bluetooth",
+    "homekit",
+    "model-y",
+    "model-3"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "homebridge": ">=1.6.0 || ^2.0.0-beta.0"
+  },
+  "author": "aldrincb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aldrincb/homebridge-tesla-ble/issues"
+  },
+  "homepage": "https://github.com/aldrincb/homebridge-tesla-ble#readme"
+}
