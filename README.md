@@ -9,7 +9,7 @@ No Tesla Fleet API developer account, no third-party subscription, no cloud prox
 ## Features
 
 - **100% Local Bluetooth LE**: Talks directly from your Raspberry Pi / Linux host (`hci0`) to your parked Tesla over encrypted VCSEC / Infotainment BLE sessions.
-- **Sleep-Safe Status Polling**: Periodically queries `body-controller-state` over passive BLE without waking the car's main computer, keeping lock, trunk, and charge port states synced in Apple Home.
+- **Sleep-Safe Status Polling**: Periodically queries `body-controller-state` over passive BLE without waking the car's main computer, keeping lock, trunk, and charge port states synced in Apple Home. When the vehicle is already awake (e.g., on arrival, unlock/lock, or wake transitions), it also syncs live `climate` and `closures` (`sentryModeState`, windows) state without preventing the car from sleeping.
 - **Serialized BLE Command Queue**: Prevents HCI socket collisions by queuing all BLE polls and commands sequentially and caching ECDH session state on disk.
 - **Explicit iOS 16+ `ConfiguredName` Support**: Properly labels every sub-switch inside multi-service Apple Home tiles.
 - **Exposed HomeKit Services**:

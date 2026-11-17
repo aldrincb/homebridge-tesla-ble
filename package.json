@@ -1,6 +1,6 @@
 {
   "name": "homebridge-tesla-ble",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "100% local Bluetooth LE Homebridge plugin for Tesla vehicles using official tesla-control (Lock/Unlock, Hands-Free Siri Voice Switch, Climate, Charge Port, Sentry Mode, Trunk, Vent Windows)",
   "main": "src/index.js",
   "repository": {
